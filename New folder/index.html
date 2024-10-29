@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch Light App</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+        #light {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="light" onclick="toggleLight()"></div>
+
+    <script>
+        let isOn = false;
+
+        function toggleLight() {
+            const light = document.getElementById('light');
+            isOn = !isOn;
+            light.style.backgroundColor = isOn ? '#ff0' : '#fff';
+        }
+    </script>
+</body>
+</html>
